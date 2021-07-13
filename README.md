@@ -7,7 +7,7 @@
   <img align="left" alt="Vyom's LinkedIN" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
 </a>
 <a href="https://www.instagram.com/vyomguptaa">
-  <img align="left" alt="Abhishek's Spotify" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/instagram.svg" />
+  <img align="left" alt="Vyom's Instagram" width="22px" src="https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png" />
 </a>
 
 ![](https://visitor-badge.glitch.me/badge?page_id=vyomguptaa.vyomguptaa)
