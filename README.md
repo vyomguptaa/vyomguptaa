@@ -21,8 +21,8 @@ i am also an open-source enthusiast and maintainer. i learned a lot from the ope
 
   <img align="right" alt="GIF" src="https://github.com/abhisheknaiidu/abhisheknaiidu/blob/master/code.gif?raw=true" width="500" height="320" />
   
-<p><img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/> 💼 any freelance work? do reach, [email](mailto:vyomgupta31@gmail.com) :) </p>
-<p><img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/> 💬 ask me about anything, i am happy to help; </p>
+<img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/> 💼 any freelance work? do reach, [email](mailto:vyomgupta31@gmail.com) :) <br></br>
+<img src="https://emojis.slackmojis.com/emojis/images/1563480763/5999/meow_party.gif?1563480763" width="30"/> 💬 ask me about anything, i am happy to help;
 
 **languages and tools:**  
 
