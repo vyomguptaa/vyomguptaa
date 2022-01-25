@@ -41,9 +41,12 @@ if you like what i do, maybe consider buying me a coffee/tea   🥺👉👈
 <br></br><br></br><br></br>
 
 
-📈 my github stats
+📈 Some Stats
 
-<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=vyomguptaa&show_icons=true&theme=gotham" alt="vyomguptaa" />
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=vyomguptaa&layout=compact" alt="vyomguptaa" />
+  
+<p align="center"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=vyomguptaa&theme=dark" alt="vyomguptaa" />
+  
 
 
 
