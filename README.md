@@ -3,7 +3,7 @@
 <a href="https://twitter.com/vyomguptaa">
   <img align="left" alt="Vyom Gupta | Twitter" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/twitter.svg" />
 </a>
-<a href="https://www.linkedin.com/in/vyom-g-2255a112a/">
+<a href="https://www.linkedin.com/in/vyomguptaa/">
   <img align="left" alt="Vyom's LinkedIN" width="22px" src="https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/linkedin.svg" />
 </a>
 <a href="https://www.instagram.com/vyomguptaa">
@@ -14,7 +14,7 @@
 
 <br />
 
-hi, i'm [Vyom Gupta](https://vyomgupta.me/), a passionate self-taught mern stack web developer and a freelancer from India. Currently, a Sophomore at Vellore Institute of Technology, Vellore. 
+hi, i'm [Vyom Gupta](http://vyomgupta.me/), a passionate self-taught mern stack web developer and a freelancer from India. Currently, a Sophomore at Vellore Institute of Technology, Vellore. 
 
 i am also an open-source enthusiast and maintainer. i learned a lot from the open-source community and i love how collaboration and knowledge sharing happened through open-source.
 
