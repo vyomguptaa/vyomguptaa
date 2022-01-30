@@ -16,7 +16,7 @@
 
 hi, i'm [Vyom Gupta](http://vyomgupta.me/), a passionate self-taught mern stack web developer and a freelancer from India. Currently, a Sophomore at Vellore Institute of Technology, Vellore. 
 
-i am also an open-source enthusiast and maintainer. i learned a lot from the open-source community and i love how collaboration and knowledge sharing happened through open-source.
+I am also an open-source enthusiast and maintainer. i learned a lot from the open-source community and i love how collaboration and knowledge sharing happened through open-source.
 
 
   <img align="right" alt="GIF" src="soapbox_4.gif" width="500" height="320" />
