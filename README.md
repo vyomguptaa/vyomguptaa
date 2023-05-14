@@ -9,8 +9,8 @@
 <a href="https://www.instagram.com/vyomguptaa">
   <img align="left" alt="Vyom's Instagram" width="22px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/198px-Instagram_logo_2016.svg.png" />
 </a>
-
-![](https://visitor-badge.glitch.me/badge?page_id=vyomguptaa.vyomguptaa)
+<!-- 
+![](https://visitor-badge.glitch.me/badge?page_id=vyomguptaa.vyomguptaa) -->
 
 <br />
 
