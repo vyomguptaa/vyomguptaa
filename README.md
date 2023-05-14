@@ -12,7 +12,8 @@
 <!-- 
 ![](https://visitor-badge.glitch.me/badge?page_id=vyomguptaa.vyomguptaa) -->
 
-<br />
+<br/>
+<br/>
 
 hi, i'm [Vyom Gupta](http://vyomgupta.me/), a passionate self-taught mern stack web developer and a freelancer from India. Currently, a Sophomore at Vellore Institute of Technology, Vellore. 
 
