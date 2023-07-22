@@ -14,7 +14,7 @@
 
 <br/>
 
-hi, i'm [Vyom Gupta](http://vyomgupta.me/), a passionate self-taught mern stack web developer and a freelancer from India. Currently, a Final Year Student at Vellore Institute of Technology, Vellore. 
+hi, i'm [Vyom Gupta](http://vyomgupta.tech/), a passionate self-taught mern stack web developer and a freelancer from India. Currently, a Final Year Student at Vellore Institute of Technology, Vellore. 
 
 I am also an open-source enthusiast and maintainer. i learned a lot from the open-source community and i love how collaboration and knowledge sharing happened through open-source.
 
