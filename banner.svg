@@ -36,7 +36,7 @@
       </feMerge>
     </filter>
     <clipPath id="sunclip">
-      <rect x="880" y="60" width="260" height="230"/>
+      <rect x="945" y="60" width="260" height="230"/>
     </clipPath>
   </defs>
 
@@ -61,12 +61,12 @@
 
   <!-- retro sun with stripe cuts -->
   <g clip-path="url(#sunclip)">
-    <circle cx="1010" cy="200" r="120" fill="url(#sun)" filter="url(#glow)"/>
+    <circle cx="1075" cy="200" r="120" fill="url(#sun)" filter="url(#glow)"/>
     <g fill="#0d0221">
-      <rect x="870" y="196" width="280" height="7"/>
-      <rect x="870" y="216" width="280" height="9"/>
-      <rect x="870" y="238" width="280" height="11"/>
-      <rect x="870" y="263" width="280" height="13"/>
+      <rect x="935" y="196" width="280" height="7"/>
+      <rect x="935" y="216" width="280" height="9"/>
+      <rect x="935" y="238" width="280" height="11"/>
+      <rect x="935" y="263" width="280" height="13"/>
     </g>
   </g>
 
@@ -97,6 +97,6 @@
   <g font-family="Arial Black, Arial, Helvetica, sans-serif" text-anchor="middle">
     <text x="600" y="165" font-size="76" font-weight="900" font-style="italic" letter-spacing="6"
           fill="url(#chrome)" filter="url(#softglow)" stroke="#12002e" stroke-width="1.5" paint-order="stroke">ANDRII DROK</text>
-    <text x="600" y="215" font-size="21" letter-spacing="10" font-family="Courier New, monospace" font-weight="bold" fill="#8ef9ff" filter="url(#softglow)">CS STUDENT &#183; BUILDER &#183; SF BAY AREA</text>
+    <text x="600" y="215" font-size="19" letter-spacing="7" font-family="Courier New, monospace" font-weight="bold" fill="#8ef9ff" filter="url(#softglow)">CS STUDENT &#183; BUILDER &#183; SF BAY AREA</text>
   </g>
 </svg>

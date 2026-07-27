@@ -51,12 +51,12 @@
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=andriidrok1&show_icons=true&theme=synthwave&hide_border=true&bg_color=0d0221&count_private=true" height="165" alt="github stats"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=andriidrok1&layout=compact&theme=synthwave&hide_border=true&bg_color=0d0221" height="165" alt="top languages"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=andriidrok1&theme=radical" height="185" alt="top languages by repo"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=andriidrok1&theme=radical" height="185" alt="top languages by commit"/>
 
 <br/><br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=andriidrok1&theme=synthwave&hide_border=true&background=0D0221&ring=FF2ECC&fire=FFD319&currStreakLabel=8EF9FF" alt="streak"/>
+<img src="https://streak-stats.demolab.com/?user=andriidrok1&theme=synthwave&hide_border=true&background=0D0221&ring=FF2ECC&fire=FFD319&currStreakLabel=8EF9FF" alt="streak"/>
 
 <br/><br/>
 
@@ -82,6 +82,6 @@
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=120&section=footer" width="100%" alt="footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:0d0221,50:3b0f5e,100:ff2ecc" width="100%" alt="footer"/>
 
 </div>
