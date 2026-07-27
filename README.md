@@ -56,7 +56,7 @@
 
 <br/><br/>
 
-<img src="https://streak-stats.demolab.com/?user=andriidrok1&mode=daily&theme=synthwave&hide_border=true&background=0D0221&ring=FF2ECC&fire=FFD319&currStreakLabel=8EF9FF" alt="streak"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=andriidrok1&theme=synthwave&hide_border=true&background=0D0221&ring=FF2ECC&fire=FFD319&currStreakLabel=8EF9FF" alt="streak"/>
 
 <br/><br/>
 
