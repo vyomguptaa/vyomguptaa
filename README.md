@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./ascii.svg" width="620" alt="Andrii Drok — ASCII portrait"/>
+<img src="./ascii.svg" width="460" alt="Andrii Drok — ASCII portrait"/>
 
 <br/><br/>
 
