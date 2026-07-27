@@ -1,18 +1,6 @@
 <div align="center">
 
-<img src="./ascii.svg" width="860" alt="Andrii Drok — ASCII portrait"/>
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<img src="banner.svg" alt="Andrii Drok — CS student, builder, SF Bay Area" width="100%"/>
-
-<br/><br/>
-
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=600&size=22&duration=2800&pause=900&color=FF2ECC&center=true&vCenter=true&width=650&lines=CS+student+%40+San+Francisco+State;Building+AI+tools+that+actually+ship;TradingView+%2F+Pine+Script+v6+developer;Currently%3A+AI+video+editing+in+the+browser" alt="typing intro"/>
+<img src="./ascii.svg" width="620" alt="Andrii Drok — ASCII portrait"/>
 
 <br/><br/>
 
