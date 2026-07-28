@@ -1,83 +1,46 @@
 <div align="center">
 
-<img src="./ascii.svg" width="460" alt="Andrii Drok — ASCII portrait"/>
+<img src="./ascii.svg" width="460" alt="Andrii Drok"/>
 
-<br/><br/>
+<img src="./stats.svg" width="620" alt="Contributions in the last year"/>
 
-<a href="https://andriidrok.com"><img src="https://img.shields.io/badge/andriidrok.com-visit-ff2ecc?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=1d0b3e" alt="website"/></a>
-<a href="https://github.com/andriidrok1?tab=followers"><img src="https://img.shields.io/github/followers/andriidrok1?style=for-the-badge&logo=github&color=ff2ecc&labelColor=1d0b3e" alt="followers"/></a>
-<img src="https://komarev.com/ghpvc/?username=andriidrok1&style=for-the-badge&color=ff2ecc&label=PROFILE+VIEWS" alt="profile views"/>
+[andriidrok.com](https://andriidrok.com) &nbsp;·&nbsp; [email](mailto:clb@mirasvit.com)
 
 </div>
 
-<br/>
+### about
 
-## 👋 About me
+CS student at San Francisco State, based in the SF Bay Area. I like small, sharp
+tools over big vague ideas — build fast, test on real users, kill what doesn't work.
 
-- 🎓 CS student at **San Francisco State University**, based in the SF Bay Area
-- 🔨 I like small, sharp tools over big vague ideas — build fast, test on real users, kill what doesn't work
-- 🎬 Currently building [**autobroll**](https://github.com/andriidrok1/autobroll) — AI short-form video editor in the browser (captions, b-roll, silence cuts) on Remotion
-- 📈 Deep into markets: Pine Script v6 indicators, backtesting, on-chain data analysis
-- 🌐 Portfolio: [andriidrok.com](https://andriidrok.com)
+Right now I'm building [autobroll](https://github.com/andriidrok1/autobroll), an AI
+short-form video editor that runs in the browser. Also deep into markets: Pine
+Script indicators, backtesting, on-chain data.
 
-<br/>
+### stack
 
-## 🛠️ Tech stack
+`python` `typescript` `javascript` `react` `node` `three.js` `fastapi` `postgres` `docker` `git` `linux` `bash`
 
-<div align="center">
+### projects
 
-<img src="https://skillicons.dev/icons?i=python,ts,js,react,nodejs,threejs,fastapi,postgres,docker,git,linux,bash&perline=6" alt="tech stack"/>
+[`autobroll`](https://github.com/andriidrok1/autobroll) — AI short-form video editor
+in the browser. Auto captions with accents, drag-and-retime editing, b-roll
+placement: transcript in, rendered video out.
 
-</div>
+[`strategy-checker`](https://github.com/andriidrok1/strategy-checker) — Describe a
+trading strategy in plain English, get a real backtest with statistical validation.
+Exposes curve-fitting, not alpha.
 
-<br/>
+[`compound`](https://github.com/andriidrok1/compound) — Autonomous research agent
+for your second brain. Built solo at Nozomio Hackathon, EF SF.
 
-## 🚀 Featured projects
+[`andriidrok.com`](https://andriidrok.com) — Particle-morph portfolio: thousands of
+particles reshaping between scenes, in Three.js and WebGL.
 
-| Project | What it does | Stack |
-|---|---|---|
-| 🎬 [**autobroll**](https://github.com/andriidrok1/autobroll) | AI short-form video editor in the browser: auto captions with accents, drag/retiming editor, b-roll placement — transcript in, rendered video out | TypeScript, Remotion, React |
-| 📊 [**strategy-checker**](https://github.com/andriidrok1/strategy-checker) | Describe a trading strategy in plain English → real backtest with statistical validation. Exposes curve-fitting, not alpha | Python |
-| 🧠 [**compound**](https://github.com/andriidrok1/compound) | Autonomous research agent for your second brain — built solo at Nozomio Hackathon (EF SF) | TypeScript, Convex |
-| ✨ [**andriidrok.com**](https://andriidrok.com) | Particle-morph portfolio — thousands of particles reshaping between scenes | Three.js, WebGL |
+### about this page
 
-<br/>
-
-## 📈 Stats
-
-<div align="center">
-
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=andriidrok1&theme=radical" height="185" alt="top languages by repo"/>
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=andriidrok1&theme=radical" height="185" alt="top languages by commit"/>
-
-<br/><br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=andriidrok1&theme=synthwave&hide_border=true&background=0D0221&ring=FF2ECC&fire=FFD319&currStreakLabel=8EF9FF" alt="streak"/>
-
-<br/><br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=andriidrok1&bg_color=0d0221&color=8ef9ff&line=ff2ecc&point=ffd319&area=true&hide_border=true" width="95%" alt="activity graph"/>
-
-</div>
-
-<br/>
-
-## 🐍 Contribution snake
-
-<div align="center">
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/andriidrok1/andriidrok1/output/github-contribution-grid-snake-dark.svg"/>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/andriidrok1/andriidrok1/output/github-contribution-grid-snake.svg"/>
-  <img src="https://raw.githubusercontent.com/andriidrok1/andriidrok1/output/github-contribution-grid-snake.svg" alt="contribution snake"/>
-</picture>
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer&color=0:0d0221,50:3b0f5e,100:ff2ecc" width="100%" alt="footer"/>
-
-</div>
+Both graphics are generated, not embedded from anywhere. `ascii.svg` is a photo run
+through a character ramp; `stats.svg` is drawn from the GitHub GraphQL API by
+[a scheduled action](.github/workflows/stats.yml) once a day. They animate with SMIL
+inside the SVG, since GitHub strips scripts from READMEs — and they make no
+third-party requests, so nothing here can rate-limit or go dark.
