@@ -21,13 +21,18 @@ import os
 import sys
 import urllib.error
 import urllib.request
+from datetime import datetime, timedelta, timezone
 
 API = "https://api.github.com/graphql"
 
+# The window is pinned to whole UTC days on purpose. Left to its own devices,
+# contributionsCollection measures "the past year" from the moment of the
+# request, so two runs minutes apart can bucket a day into different weeks and
+# shift the sparkline by a fraction of a pixel — which would commit noise daily.
 QUERY = """
-query($login: String!) {
+query($login: String!, $from: DateTime!, $to: DateTime!) {
   user(login: $login) {
-    contributionsCollection {
+    contributionsCollection(from: $from, to: $to) {
       contributionCalendar {
         totalContributions
         weeks { contributionDays { contributionCount date } }
@@ -47,8 +52,18 @@ W, H = 620, 148
 REVEAL = 1.30           # seconds; matches the portrait's cadence
 
 
+def window():
+    """A year of whole UTC days, so the output only moves when the data does."""
+    today = datetime.now(timezone.utc).date()
+    start = today - timedelta(days=364)
+    return (f"{start.isoformat()}T00:00:00Z", f"{today.isoformat()}T23:59:59Z")
+
+
 def fetch(login, token):
-    body = json.dumps({"query": QUERY, "variables": {"login": login}}).encode()
+    since, until = window()
+    body = json.dumps({"query": QUERY,
+                       "variables": {"login": login,
+                                     "from": since, "to": until}}).encode()
     req = urllib.request.Request(
         API, data=body,
         headers={"Authorization": f"bearer {token}",
