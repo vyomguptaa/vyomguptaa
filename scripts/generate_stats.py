@@ -319,6 +319,28 @@ def draw_langs(s):
     return "".join(p)
 
 
+def draw_heading(word):
+    """A section heading in the mono face, with a hairline running right.
+
+    GitHub strips <style> and style= from markdown, so a real markdown heading
+    can only ever be GitHub's own sans. Rendering the label as an SVG is the
+    only way to put the page's own typeface on it. The rule starts past the
+    longest plausible advance (0.6em is the widest common monospace ratio), so
+    a narrower font on the viewer's machine widens the gap slightly rather than
+    colliding with the text.
+    """
+    FS = 16
+    H = 26
+    text_end = len(word) * FS * 0.6 + 18
+    p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{H}" '
+         f'viewBox="0 0 {WIDTH} {H}" fill="none" font-family="{MONO}">', style()]
+    p.append(label(0, 18, word, FS, "e-f", extra=' font-weight="600"'))
+    p.append(f'<line x1="{text_end:.0f}" y1="12.5" x2="{WIDTH}" y2="12.5" '
+             f'class="u-s" stroke-width="1"/>')
+    p.append("</svg>")
+    return "".join(p)
+
+
 def draw_year(s):
     """Seven rows by fifty-three weeks, intensity as a character."""
     FS, LH, COLW = 9.2, 11.0, 2
@@ -414,6 +436,8 @@ def main():
     s = summarise(fetch(login, token))
     files = {"stats.svg": draw_stats(s), "streak.svg": draw_streak(s),
              "langs.svg": draw_langs(s), "year.svg": draw_year(s)}
+    for word in ("about", "stack", "projects", "stats", "about this page"):
+        files[f"hd-{word.replace(' ', '-')}.svg"] = draw_heading(word)
 
     changed = [n for n, svg in files.items()
                if write(os.path.join(out_dir, n), svg)]
