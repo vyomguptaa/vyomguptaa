@@ -37,10 +37,27 @@ for your second brain. Built solo at Nozomio Hackathon, EF SF.
 [`andriidrok.com`](https://andriidrok.com) — Particle-morph portfolio: thousands of
 particles reshaping between scenes, in Three.js and WebGL.
 
+### stats
+
+<div align="center">
+
+<img src="./streak.svg" width="620" alt="Current and longest streak"/>
+
+<img src="./langs.svg" width="620" alt="Top languages by bytes and by repo"/>
+
+<img src="./year.svg" width="620" alt="The last year, one character per day"/>
+
+</div>
+
 ### about this page
 
-Both graphics are generated, not embedded from anywhere. `ascii.svg` is a photo run
-through a character ramp; `stats.svg` is drawn from the GitHub GraphQL API by
-[a scheduled action](.github/workflows/stats.yml) once a day. They animate with SMIL
-inside the SVG, since GitHub strips scripts from READMEs — and they make no
-third-party requests, so nothing here can rate-limit or go dark.
+Every graphic here is generated, not embedded from anyone else's server.
+`ascii.svg` is a photo pushed through a character ramp; the four stat graphics are
+drawn straight from the GitHub GraphQL API by
+[a scheduled action](.github/workflows/stats.yml) that runs once a day and only
+commits what actually changed. They animate with SMIL inside the SVG, because
+GitHub strips scripts from READMEs — and since nothing loads from a third party,
+nothing here can rate-limit or go dark.
+
+Language totals cover public repositories only. `year.svg` uses the same character
+ramp as the portrait: `:` `+` `#` `@`, quiet to loud.
