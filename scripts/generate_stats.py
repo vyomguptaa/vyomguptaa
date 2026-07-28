@@ -62,6 +62,8 @@ MONO = ("ui-monospace,SFMono-Regular,Menlo,Consolas,"
         "&apos;Liberation Mono&apos;,monospace")
 
 WIDTH = 620            # every graphic shares one column width
+LEFT = 34              # shared left inset, so stacked blocks line up
+                       # (year.svg needs it for the weekday gutter)
 REVEAL = 1.30          # seconds; matches the portrait's cadence
 RAMP = [" ", ":", "+", "#", "@"]      # steps of the portrait's own ramp
 MON = ["jan", "feb", "mar", "apr", "may", "jun",
@@ -271,7 +273,7 @@ def draw_streak(s):
     p.append(f'<line x1="{mid:.0f}" y1="16" x2="{mid:.0f}" y2="80" '
              f'class="u-s" stroke-width="1" opacity="0">{fade(0.20)}</line>')
     for i, (val, lab, span) in enumerate(cells):
-        x = 0 if i == 0 else mid + 34
+        x = LEFT if i == 0 else mid + LEFT
         p.append(f'<g opacity="0">{fade(0.12 + i * 0.14)}'
                  + label(x, 44, f"{val}", 34, "e-f", extra=' font-weight="650"')
                  + label(x, 64, lab, 11)
@@ -284,12 +286,12 @@ def draw_langs(s):
     """Two small charts: share of bytes, and count of repos by main language."""
     rows = max(len(s["by_size"]), len(s["by_repo"]), 1)
     H = 26 + rows * 22 + 6
-    colw = (WIDTH - 30) / 2
+    colw = (WIDTH - LEFT - 30) / 2
     name_w, bar_max = 82, colw - 82 - 44
 
     p = [head(WIDTH, H)]
-    groups = [(0, "by bytes", s["by_size"], True),
-              (colw + 30, "by repos", s["by_repo"], False)]
+    groups = [(LEFT, "by bytes", s["by_size"], True),
+              (LEFT + colw + 30, "by repos", s["by_repo"], False)]
     for gi, (gx, title, data, as_pct) in enumerate(groups):
         p.append(f'<g opacity="0">{fade(0.10 + gi * 0.10)}'
                  + label(gx, 12, title.upper(), 9, "m-f",
@@ -321,7 +323,7 @@ def draw_year(s):
     """Seven rows by fifty-three weeks, intensity as a character."""
     FS, LH, COLW = 9.2, 11.0, 2
     CW = FS * 0.6
-    pad_l, pad_t = 34, 44
+    pad_l, pad_t = LEFT, 44
     weeks = s["weeks"]
     ncols = len(weeks) * COLW
     H = int(pad_t + 7 * LH + 26)
