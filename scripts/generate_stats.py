@@ -18,6 +18,8 @@ Env:
   GH_LOGIN      user to summarise (default: andriidrok1)
   OUT_DIR       where to write (default: repository root)
 """
+import base64
+import functools
 import json
 import os
 import sys
@@ -58,8 +60,37 @@ LIGHT = dict(data="#6e7681", emph="#424a53", dim="#8c959f",
              rule="#d8dee4", surface="#ffffff")
 DARK = dict(data="#c9d1d9", emph="#f0f6fc", dim="#8b949e",
             rule="#30363d", surface="#0d1117")
-MONO = ("ui-monospace,SFMono-Regular,Menlo,Consolas,"
+# JBMono is the inlined subset below; the rest is a fallback for the unlikely
+# case a renderer ignores the embedded face.
+MONO = ("JBMono,ui-monospace,SFMono-Regular,Menlo,Consolas,"
         "&apos;Liberation Mono&apos;,monospace")
+FONT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fonts")
+
+
+@functools.lru_cache(maxsize=None)
+def face(filename, weight):
+    """One @font-face rule with the subset inlined as a data URI.
+
+    An external font URL cannot work here: these SVGs are loaded through <img>,
+    and browsers refuse to fetch subresources for an image document. Inlining is
+    also what pins the advance width — the portrait's grid assumes 0.600 em, and
+    a viewer whose default monospace is narrower would otherwise see it squeezed.
+    """
+    with open(os.path.join(FONT_DIR, filename), "rb") as f:
+        b64 = base64.b64encode(f.read()).decode("ascii")
+    return (f"@font-face{{font-family:JBMono;font-style:normal;"
+            f"font-weight:{weight};font-display:block;"
+            f"src:url(data:font/woff2;base64,{b64}) format('woff2')}}")
+
+
+def font_text():
+    """Basic latin, both weights — for the data graphics."""
+    return face("jbmono-400.woff2", 400) + face("jbmono-600.woff2", 600)
+
+
+def font_head():
+    """Only the letters the section headings use."""
+    return face("jbmono-head.woff2", 600)
 
 WIDTH = 620            # every graphic shares one column width
 LEFT = 34              # shared left inset, so stacked blocks line up
@@ -167,20 +198,21 @@ def summarise(user):
 
 # ---------------------------------------------------------------- drawing
 
-def style(extra=""):
+def style(extra="", font=None):
     def block(t):
         return (f".d-f{{fill:{t['data']}}}.d-s{{stroke:{t['data']}}}"
                 f".e-f{{fill:{t['emph']}}}.m-f{{fill:{t['dim']}}}"
                 f".u-s{{stroke:{t['rule']}}}.r{{stroke:{t['surface']}}}")
-    return (f"<style>{block(LIGHT)}.w{{fill:{LIGHT['data']};opacity:.13}}{extra}"
+    return (f"<style>{font or font_text()}"
+            f"{block(LIGHT)}.w{{fill:{LIGHT['data']};opacity:.13}}{extra}"
             f"@media(prefers-color-scheme:dark){{{block(DARK)}"
             f".w{{fill:{DARK['data']};opacity:.16}}}}</style>")
 
 
-def head(w, h):
+def head(w, h, font=None):
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" '
             f'viewBox="0 0 {w} {h}" fill="none" font-family="{MONO}">'
-            + style())
+            + style(font=font))
 
 
 def fade(delay, dur=0.45):
@@ -226,7 +258,7 @@ def draw_stats(s):
     peak = max(weekly) or 1
     p = [head(WIDTH, H)]
     p.append(f'<g opacity="0">{fade(0.10)}'
-             + label(0, 50, s["total"], 52, "e-f", extra=' font-weight="650"')
+             + label(0, 50, s["total"], 52, "e-f", extra=' font-weight="600"')
              + label(0, 72, "contributions in the last year", 12) + '</g>')
     for i, (val, lab) in enumerate([(s["active"], "active days"),
                                     (s["best_week"], "best week")]):
@@ -275,7 +307,7 @@ def draw_streak(s):
     for i, (val, lab, span) in enumerate(cells):
         x = LEFT if i == 0 else mid + LEFT
         p.append(f'<g opacity="0">{fade(0.12 + i * 0.14)}'
-                 + label(x, 44, f"{val}", 34, "e-f", extra=' font-weight="650"')
+                 + label(x, 44, f"{val}", 34, "e-f", extra=' font-weight="600"')
                  + label(x, 64, lab, 11)
                  + label(x, 80, span, 10) + '</g>')
     p.append("</svg>")
@@ -332,8 +364,7 @@ def draw_heading(word):
     FS = 16
     H = 26
     text_end = len(word) * FS * 0.6 + 18
-    p = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{H}" '
-         f'viewBox="0 0 {WIDTH} {H}" fill="none" font-family="{MONO}">', style()]
+    p = [head(WIDTH, H, font=font_head())]
     p.append(label(0, 18, word, FS, "e-f", extra=' font-weight="600"'))
     p.append(f'<line x1="{text_end:.0f}" y1="12.5" x2="{WIDTH}" y2="12.5" '
              f'class="u-s" stroke-width="1"/>')
