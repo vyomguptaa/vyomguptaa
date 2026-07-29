@@ -56,7 +56,8 @@ Particle-morph portfolio: thousands of particles reshaping between scenes.
 <img src="./hd-about-this-page.svg" width="620" alt="about this page"/>
 
 Every graphic here is generated, not embedded from anyone else's server.<br>
-`ascii.svg` is a photo pushed through a character ramp; the stat graphics and<br>
+`ascii.svg` is a photo pushed through a character ramp by<br>
+[`scripts/make_portrait.py`](scripts/make_portrait.py); the stat graphics and<br>
 these section headings are drawn by [a scheduled action](.github/workflows/stats.yml)<br>
 straight from the GitHub GraphQL API, once a day, committing only what changed.
 
