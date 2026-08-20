@@ -2,7 +2,7 @@
 
 <img src="./ascii.svg" width="460" alt="Vyom Gupta"/>
 
-<img src="./stats.svg" width="620" alt="Vyom Gupta's GitHub contributions"/>
+<img src="./stats.svg?v=20260821" width="620" alt="Vyom Gupta's GitHub contributions"/>
 
 [vyomgupta.tech](https://vyomgupta.tech) &nbsp;·&nbsp;
 [LinkedIn](https://www.linkedin.com/in/vyomguptaa/) &nbsp;·&nbsp;
@@ -46,11 +46,11 @@ A monitoring script that checks servers periodically and sends email notificatio
 
 <div align="center">
 
-<img src="./streak.svg" width="620" alt="Current and longest streak"/>
+<img src="./streak.svg?v=20260821" width="620" alt="Current and longest streak"/>
 
-<img src="./langs.svg" width="620" alt="Top languages by bytes and by repo"/>
+<img src="./langs.svg?v=20260821" width="620" alt="Top languages by bytes and by repo"/>
 
-<img src="./year.svg" width="620" alt="The last year, one character per day"/>
+<img src="./year.svg?v=20260821" width="620" alt="The last year, one character per day"/>
 
 </div>
 
